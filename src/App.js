@@ -1,6 +1,6 @@
 import * as React from "react";
 import "./App.css";
-import bgImage from "./images/bg_image.png";
+import bgImage from "./images/image.png";
 import avatar from './images/avatar.png'
 import LandingText from "./components/LandingText.jsx";
 import Footer from "./components/footer.jsx";
@@ -13,16 +13,72 @@ import jquery from "./images/Vector (1).png";
 import nodeJS from "./images/🦆 icon _node dot js_.png";
 import java from "./images/🦆 icon _java_.png";
 import About from "./components/About.jsx";
+import Circle from "./components/circle.jsx";
+import { useEffect } from "react";
+import BlockDetector from "./components/BlockDetector.jsx";
+
 
 function App() {
   return (
     <>
+    <Circle
+     height="100px"
+     width="100px"
+     bgColor="#7386cb"
+     opacity={0.1}
+     top="1vh"
+     left="1vw" />
+      <Circle
+     height="300px"
+     width="300px"
+     bgColor="#7386cb"
+     opacity={0.1}
+     top="10vh"
+     left="0vw" />
+      <Circle
+     height="160px"
+     width="160px"
+     bgColor="#7386cb"
+     opacity={0.1}
+     top="10vh"
+     left="67vw" />
+      <Circle
+     height="160px"
+     width="160px"
+     bgColor="#7386cb"
+     opacity={0.1}
+     top="82vh"
+     left="92vw" />
+      <Circle
+     height="94vh"
+     width="645px"
+     bgColor="#7386cb"
+     opacity={0.1}
+     top="193vh"
+     left="-9vw"
+     class="contact-bg" />
+           <Circle
+     height="160px"
+     width="160px"
+     bgColor="black"
+     opacity={0.1}
+     top="1vh"
+     left="12vw" />
+           <Circle
+     height="80px"
+     width="80px"
+     bgColor="black"
+     opacity={0.1}
+     top="1vh"
+     left="35vw" />
     <div className="d-flex justify-content-end">
     <img src={avatar} style={
       {height:"50px",paddingRight:"10px",paddingTop:"10px"}} />
     </div>
       <div className="d-flex align-items-center" style={{ gap: "70px" }}>
-        <img src={bgImage} style={{ height: "94vh" }} />
+        <img className="d-none d-md-block" src={bgImage} style={{ height: "84vh" ,
+              filter: "drop-shadow(2px 4px 300px #7e86cb)"
+        }} />
 
         <LandingText />
       </div>
@@ -30,7 +86,7 @@ function App() {
       <h4 className="d-flex justify-content-center m-5">Skills</h4>
       <div className="blurred-bg">
         <div className="container">
-          <div className="row justify-content-center">
+          <div className="row justify-content-center container">
             <div className="col-md-1 glass-card">
               <img src={HTML} />
             </div>
@@ -47,7 +103,7 @@ function App() {
               <img src={reactImage} />
             </div>
           </div>
-          <div className="row justify-content-center">
+          <div className="row justify-content-center container">
             <div className="col-md-1 glass-card">
               <img src={jquery} />
             </div>
@@ -70,34 +126,7 @@ function App() {
     <div className="container">
 
     </div>
-      <div className="d-flex justify-content-between container">
-        <div className="d-flex flex-column g-10">
-          <button class="btn-secondary col-8">Contact Me</button>
-          <div class="d-flex flex-column g-5">
-            <span className="font-size30 secondary-clr">
-              Got Any Questions?
-            </span>
-            <span>Let's Connect.</span>
-          </div>
-        </div>
-        <div>
-          <form className="d-flex g-20 flex-column">
-          <div class="form-group">
-            <input type="text" class="form-control" placeholder="Name" required/>
-            </div>
-            <div class="form-group">
-            <input type="email" class="form-control" placeholder="Email" required/>
-            </div>
-            <div class="form-group">
-            <textarea type="text" class="form-control" rows={4} placeholder="Message" required/>
-            </div>
-            <div className="form-group">
-              <span><i class="bi bi-envelope"></i> &ensp;althaf.sh658@gmail.com</span> &ensp;&ensp;
-              <button className="btn-primary" type="submit"><i class="bi bi-envelope"></i> Hit me up</button>
-            </div>
-            </form>
-        </div>
-      </div>
+      <BlockDetector/>
         <div className="d-flex justify-content-center"><span>Made with <img width="20" height="20" src="https://img.icons8.com/doodle/50/stitched-heart.png" alt="stitched-heart"/> by Althaf</span></div>
       <Footer />
     </>

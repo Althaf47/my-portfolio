@@ -14,6 +14,7 @@ body
 {
   font-size: 16px !important;
   font-family: "Inter", sans-serif !important;
+  overflow-x: hidden;
 }
 .highlighted-text 
 {
@@ -38,6 +39,7 @@ body
 button  
 {
   border-radius: 4px !important;
+  border: none;
 }
 .g-10 
 {
@@ -78,6 +80,7 @@ border:1px solid white;
     align-items: center;
     padding: 14px;
     justify-content: space-between;
+    z-index:4;
 }
 .glass-card 
 {
@@ -173,3 +176,29 @@ font-size: 12px;
     height: 79.5px
   }  
 } */
+
+.blurred-bg{
+  filter: invert();
+}
+
+@media(max-width:500px) {
+  body{
+    font-size: 14px !important;
+  }
+}
+.bg-circle{
+  border-radius: 100%;
+  position: absolute;
+}
+.contact-bg{
+  filter: drop-shadow(2px 4px 300px #005d7c);
+  border-radius: 0px !important;
+  left:450px !important;
+  visibility: hidden;
+}
+.active-contact-bg{
+  visibility: visible;
+ left:-100px !important;
+  transition: 0.5s ease-in;
+
+}
