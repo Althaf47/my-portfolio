@@ -17,7 +17,7 @@ const BlockDetector = () => {
           });
         },
         {
-          threshold: 1, // Adjust this to trigger when 50% of the element is visible
+          threshold: 1, // Adjust this to trigger when 100% of the element is visible
         }
       );
   
@@ -35,7 +35,7 @@ const BlockDetector = () => {
 
     return(
         <>
-<div className="d-flex justify-content-between container flex-wrap">
+<div className="d-flex justify-content-between container flex-wrap mt-5">
         <div className="d-flex flex-column g-10" id="contactBlock">
           <button class="btn-secondary col-8">Contact Me</button>
           <div class="d-flex flex-column g-5">

@@ -4,7 +4,7 @@ function About() {
       <h4 className="centered-text m-5">About</h4>
       <div className="centered-text flex-column align-items-center">
         <div>
-          I am a&ensp;<span className="highlighted-text">UI Developer</span>.
+          <span>hey  there !</span> I am a&ensp;<span className="highlighted-text">UI Developer</span>.
           having experise in Web Design I Design Web Applications that make
           difference.
         </div>

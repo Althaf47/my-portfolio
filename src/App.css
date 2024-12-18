@@ -1,4 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Annie+Use+Your+Telescope&family=Neucha&family=Londrina+Solid:wght@300&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Source+Sans+3:ital,wght@0,200..900;1,200..900&display=swap');
 :root
 {
   --primary-color:black;
@@ -9,11 +10,14 @@
 .secondary-clr{
   color: var(--secondary-color);
   /* font-family: "Annie Use Your Telescope", Arial, Helvetica, sans-serif; */
+  font-optical-sizing: auto;
+  font-style: normal;
 }
 body 
 {
   font-size: 16px !important;
-  font-family: "Inter", sans-serif !important;
+  font-family: "Source Sans 3", serif;
+
   overflow-x: hidden;
 }
 .highlighted-text 
@@ -85,7 +89,6 @@ border:1px solid white;
 .glass-card 
 {
   /* From https://css.glass */
-background: rgba(255, 255, 255, 0.21);
 border-radius: 6px;
 box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
 backdrop-filter: blur(8.9px);
@@ -201,4 +204,31 @@ font-size: 12px;
  left:-100px !important;
   transition: 0.5s ease-in;
 
+}
+.col-md-1.glass-card:hover {
+  transform: rotate(5deg);
+  transition: 0.5s ease;
+}
+.exp-ul>li .nav-link{
+  color: inherit;
+}
+.exp-ul>li .nav-link.active{
+ color: var(--secondary-color);
+ background-color: inherit !important;
+}
+.exp-ul{
+  border-right:1px solid #7e86cb36;
+  height: 220px;
+}
+.z-1{
+  z-index: 1;
+}
+.skill-list{
+  padding-left: 0px;
+  list-style: none;
+}
+.skill-list li::before {
+  content: "-"; /* Add a hyphen before each list item */
+  margin-right: 10px; /* Add some space after the hyphen */
+  color: black; /* Optional: Customize color */
 }
