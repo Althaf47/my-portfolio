@@ -14,6 +14,7 @@ import nodeJS from "./images/🦆 icon _node dot js_.png";
 import java from "./images/🦆 icon _java_.png";
 import About from "./components/About.jsx";
 import Circle from "./components/circle.jsx";
+import Card from "./components/Card.jsx";
 import { useEffect } from "react";
 import BlockDetector from "./components/BlockDetector.jsx";
 import ExpierienceBlock from "./components/ExpierienceBlock.jsx";
@@ -22,6 +23,7 @@ import ExpierienceBlock from "./components/ExpierienceBlock.jsx";
 function App() {
   return (
     <>
+    <Card/>
     <Circle
      height="100px"
      width="100px"
@@ -72,14 +74,46 @@ function App() {
      opacity={0.1}
      top="1vh"
      left="35vw" />
+     <Card 
+     height="120px"
+     width="200px"
+     top="7vh"
+     left="13vw"
+     bgColor="#f7f7f7"
+     content="Front End Developer?"/>
+     <a className="cursor-img"/>
+        <Card 
+     height="60px"
+     width="200px"
+     top="45vh"
+     left="10vw"
+     bgColor="#f7f7f7"/>
+       <Card 
+     height="60px"
+     width="200px"
+     top="45vh"
+     right="10vw"
+     bgColor="#f7f7f7"/>
+       <Card 
+     height="80px"
+     width="200px"
+     top="45vh"
+     right="10vw"
+     bgColor="#f7f7f7"/>
+       <Card 
+     height="60px"
+     width="200px"
+     top="5vh"
+     left="45vw"
+     bgColor="#f7f7f7"/>
     <div className="d-flex justify-content-end">
     <img src={avatar} style={
       {height:"50px",paddingRight:"10px",paddingTop:"10px"}} />
     </div>
-      <div className="d-flex align-items-center" style={{ gap: "70px" }}>
-        <img className="d-none d-md-block" src={bgImage} style={{ height: "84vh" ,
+      <div className="d-flex align-items-center justify-content-center" style={{ gap: "70px", height:"82vh"}}>
+        {/* <img className="d-none d-md-block" src={bgImage} style={{ height: "84vh" ,
               filter: "drop-shadow(2px 4px 300px #7e86cb)"
-        }} />
+        }} /> */}
 
         <LandingText />
       </div>
